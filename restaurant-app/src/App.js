@@ -24,6 +24,8 @@ function App() {
           name={restaurant.name}
           image={restaurant.image}
           hash={restaurant.blurhash}
+          description={restaurant.description}
+          city={restaurant.city}
           />
         ))}
       </>
