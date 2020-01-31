@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Restaurant from './components/restaurant';
+import Restaurant from './components/Restaurant';
 
 function App() {
 
@@ -16,13 +16,14 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" >
       <>
         {restaurants.map(restaurant => (
           <Restaurant className="restaurant"
           key={restaurant.name} 
           name={restaurant.name}
           image={restaurant.image}
+          hash={restaurant.blurhash}
           />
         ))}
       </>
