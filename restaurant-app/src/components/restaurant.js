@@ -3,29 +3,35 @@ import { Blurhash } from "react-blurhash";
 
 function Restaurant(props) {
 
-    const sharp = 
-    <div className="sharpContainer">
-        <span className="restaurantName">
-            {props.name}
-        </span>
-        <img className="sharpImage"
-        src={props.image}
-        alt="Image of food"/>
-        <p className="description">
-            {props.description}
-        </p>
-        <p className="city">
-            @ {props.city}
-        </p>
+    const sharp =
+        <div className="sharpContainer">
+            <p className="name">
+                {props.name}
+            </p>
+            <img className="sharpImage"
+                src={props.image}
+                alt="Image of food" />
+            <p className="description">
+                {props.description}
+            </p>
+            <p className="city">
+                @ {props.city}
+            </p>
 
-    </div>
+        </div>
 
 
-    const blur = <Blurhash className="blurContainer"
-        hash={props.hash} 
-        width={300}
-        height={300}
-        />
+    const blur =
+        <div className="blurredContainer">
+            <Blurhash
+                hash={props.hash}
+                width={300}
+                height={300}
+            />
+            <p className="blurredTitle">
+                {props.name}
+            </p>
+        </div>
 
     const [image, setImage] = useState(blur);
 
