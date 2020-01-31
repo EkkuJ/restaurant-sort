@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Restaurant from './components/restaurant';
 
 function App() {
 
@@ -8,17 +9,21 @@ function App() {
 
   var restaurants = [];
 
-  // Loop trough the JSON-Array and 
+  // Loop trough the JSON-Array and add them into the js-array.
   for (var i = 0; i < jsonData.restaurants.length; i++) {
     var restaurant = jsonData.restaurants[i];
     restaurants.push(restaurant)
-  }
+  };
 
   return (
     <div className="App">
       <>
         {restaurants.map(restaurant => (
-          <div className="restaurant" key={restaurant.name}>{restaurant.name}</div>
+          <Restaurant className="restaurant"
+          key={restaurant.name} 
+          name={restaurant.name}
+          image={restaurant.image}
+          />
         ))}
       </>
     </div>
