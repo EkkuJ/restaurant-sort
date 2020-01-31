@@ -1,0 +1,17 @@
+body {
+    background-color: #282c34;
+    text-align: center;
+       
+}
+
+.sharpImage {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.App > * {
+    width: 300px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+}
