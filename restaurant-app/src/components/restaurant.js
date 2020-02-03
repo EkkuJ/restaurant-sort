@@ -44,8 +44,15 @@ function Restaurant(props) {
     // Current status of the restaurant. Is either 'sharp' or 'blur'.
     const [element, setElement] = useState(blur);
 
+    function handleMouseEnter() {
+        setElement(sharp)
+    }
+    
+    function handleMouseLeave() {
+        setElement(blur)
+    }
     return (
-        <div onMouseEnter={setElement(sharp)} onMouseLeave={setElement(blur)}>
+        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="restaurantContainer">
                 {element}
             </div>
