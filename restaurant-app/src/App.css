@@ -1,0 +1,53 @@
+body {
+    background-color: #001041;
+    text-align: center;
+       
+}
+
+.sharpImage {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.App > * {
+    width: 300px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+}
+
+.description, .city, .name {
+    font-family: 'Gruppo';
+    color: antiquewhite;
+}
+
+.description {
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+
+.city {
+    font-size: smaller;
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    font-size: large;
+    margin-bottom: 5%;
+}
+
+.blurredContainer {
+    position: relative;
+}
+
+.blurredTitle {
+    font-family: 'Gruppo';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: x-large;
+    background-color: rgba(255, 235, 205, 0.432);
+}
