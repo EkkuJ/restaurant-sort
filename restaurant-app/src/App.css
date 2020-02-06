@@ -1,22 +1,58 @@
 body {
     background-color: #001041;
-    text-align: center;
-       
+    text-align: center;      
 }
 
-.sharpImage {
+header {
+    padding: 10px;
+}
+
+.headerfooter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.intro {
+    flex: 50%
+}
+
+.blurredContainer, .sharpImage {
     max-width: 300px;
     max-height: 300px;
 }
 
-.App > * {
-    width: 300px;
+.restaurantContainer {
+    justify-content: center;
+    align-items: center;
     height: 300px;
-    float: left;
-    padding: 10px;
 }
 
-.description, .city, .name {
+.blurredContainer {
+    display: inline-flex;
+}
+.orderedRestaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    clear: both;
+}
+
+.blurredImage, .blurredContainer {
+    position: relative;
+}
+
+.blurredTitle {
+    font-family: 'Gruppo';
+    background-color:rgba(252, 227, 196, 0.692);
+    font-size: x-large;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    bottom: 0px;
+}
+
+.description, .city, .name, .title, .intro{
     font-family: 'Gruppo';
     color: antiquewhite;
 }
@@ -34,20 +70,53 @@ body {
 }
 
 .name {
-    font-size: large;
-    margin-bottom: 5%;
-}
-
-.blurredContainer {
-    position: relative;
-}
-
-.blurredTitle {
-    font-family: 'Gruppo';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
     font-size: x-large;
-    background-color: rgba(255, 235, 205, 0.432);
+    margin-bottom: 1px;
 }
+
+.title {
+    color: black;
+    background-color:rgb(255, 238, 215);
+    font-size: 40px;
+    padding: 10px;
+}
+
+.sortbtn {
+    font-family: 'Gruppo';
+    background-color:rgb(255, 238, 215);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .sortbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .sortbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .sortbtn:hover span {
+    padding-right: 25px;
+  }
+  
+  .sortbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
