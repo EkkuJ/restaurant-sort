@@ -6,7 +6,7 @@ function Restaurant(props) {
     /**
      *  Element for focused restaurants. Contains the name, the picture, the description and the city
      *  of the restaurant.
-     * */ 
+     * */
 
     const sharp =
         <div className="sharpContainer">
@@ -15,7 +15,7 @@ function Restaurant(props) {
             </p>
             <img className="sharpImage"
                 src={props.image}
-                alt="Image of food" />
+                alt="Food"/>
             <p className="description">
                 {props.description}
             </p>
@@ -31,7 +31,7 @@ function Restaurant(props) {
      */
     const blur =
         <div className="blurredContainer">
-            <Blurhash
+            <Blurhash className="blurredImage"
                 hash={props.hash}
                 width={300}
                 height={300}
@@ -47,15 +47,13 @@ function Restaurant(props) {
     function handleMouseEnter() {
         setElement(sharp)
     }
-    
+
     function handleMouseLeave() {
         setElement(blur)
     }
     return (
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <div className="restaurantContainer">
-                {element}
-            </div>
+        <div className="restaurantContainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {element}
         </div>
     );
 }
