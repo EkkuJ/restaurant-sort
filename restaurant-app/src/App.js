@@ -49,10 +49,15 @@ function App() {
     <div className="App" >
       <header>
         <h1 className="title">Restaurants</h1>
-        {(element === initialElement || element === refZA.current) ?
-          <button className="sortbtn" onClick={handleSortAZ}>Sort Ascending</button> :
-          <button className="sortbtn" onClick={handleSortZA}>Sort Descending </button>
-        }
+        <div className="headerfooter">
+          {(element === initialElement || element === refZA.current) ?
+            <button className="sortbtn" onClick={handleSortAZ}><span>Sort Ascending</span></button> :
+            <button className="sortbtn" onClick={handleSortZA}><span>Sort Descending</span> </button>
+          }
+          <span className="intro">
+            Summer 2020 Internships - Engineering Pre-assignment by Ekku Jokinen
+        </span>
+        </div>
       </header>
       <div className="restataurantsContainer">
         {element}
