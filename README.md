@@ -1,5 +1,6 @@
 # restaurant-sort
-Wolt Summer 2020 Internships - Engineering Pre-assignment. Sorts a JSON-list of restaurants alphabetically.
+
+A React application that sorts a JSON-list of restaurants alphabetically.
 
 Deployed to [Netlify](https://eloquent-darwin-378869.netlify.com).
 
