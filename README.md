@@ -1,6 +1,6 @@
 # restaurant-sort
 
-A React application that sorts a JSON-list of restaurants alphabetically. Restauran information provided by WOLT.
+A React application that sorts a JSON-list of restaurants alphabetically. Restaurant information is provided by WOLT.
 
 Deployed to [Netlify](https://eloquent-darwin-378869.netlify.com).
 
