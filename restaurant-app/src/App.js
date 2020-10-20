@@ -55,7 +55,7 @@ function App() {
             <button className="sortbtn" onClick={handleSortZA}><span>Sort Descending</span> </button>
           }
           <span className="intro">
-            Summer 2020 Internships - Engineering Pre-assignment by Ekku Jokinen
+            A restaurant sorter by Ekku Jokinen. Restaurant information provided by WOLT.
         </span>
         </div>
       </header>
